@@ -38,7 +38,7 @@ session_start();
             </div>
         </div>
     <?php
-    else:
+    elseif(isset($_SESSION['status_cadastro']) && !$_SESSION['status_cadastro']):
         ?>
         <div class="row">
             <div class="col-md-1"></div>
