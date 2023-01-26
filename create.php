@@ -38,6 +38,18 @@ session_start();
             </div>
         </div>
     <?php
+    else:
+        ?>
+        <div class="row">
+            <div class="col-md-1"></div>
+            <div class="col-md-10">
+                <div class="alert alert-danger alert-dismissible">
+                    <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
+                    Não foi possivel cadastrar o usuário, verifique os campos preenchidos!
+                </div>
+            </div>
+        </div>
+    <?php
     endif;
     unset($_SESSION['status_cadastro']);
     ?>
@@ -57,26 +69,27 @@ session_start();
                 <div class="row">
                     <div class="col-md-4">
                         <label for="cep">CEP <strong>*</strong></label>
-                        <input type="text" class="form-control" id="cep" name="cep" placeholder="Digite o seu CEP" minlength="8" maxlength="8">
+                        <input type="text" class="form-control numeric" id="cep" name="cep"
+                               placeholder="Digite o seu CEP" required minlength="8" maxlength="8">
                     </div>
                     <div class="col-md-4">
                         <label for="estado">Estado <strong>*</strong></label>
-                        <input type="text" class="form-control" id="estado" name="estado" readonly required>
+                        <input type="text" class="form-control" id="estado" name="estado" required readonly>
                     </div>
                     <div class="col-md-4">
                         <label for="cidade">Cidade <strong>*</strong></label>
-                        <input type="text" class="form-control" id="cidade" name="cidade" readonly required>
+                        <input type="text" class="form-control" id="cidade" name="cidade" required readonly>
                     </div>
                 </div>
 
                 <div class="row mt-2">
                     <div class="col-md-6">
                         <label for="bairro">Bairro <strong>*</strong></label>
-                        <input type="text" class="form-control" id="bairro" name="bairro" readonly required>
+                        <input type="text" class="form-control" id="bairro" name="bairro" required readonly>
                     </div>
                     <div class="col-md-6">
                         <label for="rua">Rua <strong>*</strong></label>
-                        <input type="text" class="form-control" id="rua" name="rua" readonly required>
+                        <input type="text" class="form-control" id="rua" name="rua" required readonly>
                     </div>
                 </div>
 
